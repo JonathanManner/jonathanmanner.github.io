@@ -6,7 +6,7 @@ h1 {
     text-align: center;
     background-image: url("/images/pattern.webp");
 }
-h3 {
+h6 {
     font-family: Helvetica;
     font-size: 32px;
     font-weight: bold;
@@ -20,4 +20,9 @@ h3 {
 }
 .paint {
     background-color: skyblue;
+}
+span {
+    font-family: Helvetica;
+    font-weight: bold;
+    color: blue;
 }
