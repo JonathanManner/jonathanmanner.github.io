@@ -6,3 +6,18 @@ h1 {
     text-align: center;
     background-image: url("/images/pattern.webp");
 }
+h3 {
+    font-family: Helvetica;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+}
+.brush {
+    background-color: mediumspringgreen;
+}
+.frame {
+    background-color: lightcoral;
+}
+.paint {
+    background-color: skyblue;
+}
