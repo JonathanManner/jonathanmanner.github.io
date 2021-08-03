@@ -2,23 +2,10 @@ h2 {
     font-family: Helvetica;
     font-size: 100px;
     font-weight: bold;
-    color: khaki;
+    color: cornflowerblue;
     text-align: center;
-    background-image: url("/images/pattern.webp");
 }
-h6 {
-    font-family: Helvetica;
-    font-size: 32px;
-    font-weight: bold;
-    color: white;
-}
-.brush {
-    background-color: mediumspringgreen;
-}
-.frame {
-    background-color: lightcoral;
-}
-.paint {
+.aboutMe {
     background-color: skyblue;
 }
 span {
