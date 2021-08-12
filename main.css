@@ -5,14 +5,14 @@ h2 {
     font-family: Helvetica;
     font-size: 50px;
     font-weight: bold;
-    color: rgb(108, 108, 109);
+    color: #62AC61;
     text-align: center;
 }
 .aboutMe {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #969797;
+    background-color: #0A123A;
     color: white;
 }
 .nav-title {
@@ -34,7 +34,7 @@ h2 {
     display: block;
 }
 .navbar-links li:hover {
-    background-color: #555;
+    background-color:#2775CE;
     transition: all 0.8s ease;
 }
 .toggle-button {
@@ -90,12 +90,14 @@ span {
     color: blue;
 }
 .mainInfo {
+    color: #fff;
     margin: 3rem;
     padding: 5rem;
     max-width: 500px;
     margin: auto;
-    border: 1px solid rgb(141, 141, 141);
+    border: 1px solid rgb(39, 60, 100);
     border-radius: 10%;
+    background-color: #0A123A;
 }
 .test {
     border: 3px solid;
@@ -106,7 +108,7 @@ span {
     padding: 1rem;
 }
 body {
-    background-color: rgb(199, 201, 202);
+    background-color: #2775CE;
     margin: 0;
     padding: 0;
 }
