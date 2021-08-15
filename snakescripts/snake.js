@@ -1,4 +1,4 @@
-import { update as updateSnake, draw as drawSnake, snakeSpeed } from '/snakeBod.js'
+import { update as updateSnake, draw as drawSnake, snakeSpeed } from '/snakescripts/snakeBod.js'
 
 let lastRenderTime = 0;
 
@@ -8,7 +8,7 @@ function gameLoop(currentTime) {
     if (secondsSinceLastRender < 1 / snakeSpeed) return;
 
     lastRenderTime = currentTime;
-
+    //console.log('render');
 
 
 }
