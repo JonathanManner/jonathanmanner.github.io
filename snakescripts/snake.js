@@ -9,7 +9,8 @@ function gameLoop(currentTime) {
 
     lastRenderTime = currentTime;
     //console.log('render');
-
+    update();
+    draw();
 
 }
 window.requestAnimationFrame(gameLoop);
