@@ -21,5 +21,6 @@ body {
 }
 .food {
     background-color: red;
+    border-radius: 30%;
     border: .25vmin solid black;
 }
