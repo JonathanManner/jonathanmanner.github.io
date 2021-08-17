@@ -3,13 +3,14 @@ import { randomGridPosition } from '/snakescripts/grid.js'
 
 let food = getRandomFoodPosition()
 const EXPANSION_RATE = 5
-
 export function update() {
   if (onSnake(food)) {
     expandSnake(EXPANSION_RATE)
     food = getRandomFoodPosition()
+    // fix later score = score + 1;
   }
 }
+
 
 export function draw(gameBoard) {
   const foodElement = document.createElement('div')

@@ -4,6 +4,7 @@ import { outsideGrid } from '/snakescripts/grid.js'
 
 let lastRenderTime = 0
 let gameOver = false
+// fix later let score = 0;
 const gameBoard = document.getElementById('game-board')
 
 function main(currentTime) {
