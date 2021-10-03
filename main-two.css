@@ -1,4 +1,18 @@
 /*gray = #E3E3E3, off-white = #F6F6F8, touch of red = #C60021*/
 body {
     background-color: #F6F6F6;
+    font-family: Copperplate, Papyrus, fantasy;
+    
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    padding: 20px;
+}
+
+.profile-pic img {
+max-width: 100%;
+height: auto;
 }
