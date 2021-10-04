@@ -18,6 +18,7 @@
 a {
     color: black;
     text-decoration: none;
+    transition: color 0.3s ease-out 0.1s;
   }
 
 body {
@@ -45,6 +46,9 @@ span {
     height: 3rem;
 }
 
+a:hover {
+    color: #C60021;
+}
 /*****-2-Nav-bar-**********************/
 
 .nav-list li {
@@ -101,6 +105,12 @@ footer li {
 footer img {
     width: 3rem;
     margin-right: 0.5rem;
+    transition: all 0.3s ease-in-out; 
+}
+
+footer img:hover {
+    transform: scale(1.25);
+   
 }
 
 .footer-list {
@@ -111,11 +121,15 @@ footer img {
 .contact {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
 }
+
+
 
 /*****-5-Mail-form-********************/
 
-form {
+/* form {
     display: flex;
     justify-content: center;
     height: 2rem;
@@ -123,7 +137,7 @@ form {
 
 .mail-container {
     margin: auto;
-}
+} */
 
 /*****-6-Media-Queries-****************/
 
