@@ -61,8 +61,8 @@ a:hover {
 .nav-list {
     display: flex;
     justify-content: end;
-    margin: 20px;
-    margin-right: 6rem;
+    padding: 20px;
+    border-bottom: 1px solid #C60021;
 }
 
 .about a {
@@ -95,7 +95,11 @@ height: auto;
 /*****-4-Footer-***********************/
 
 footer {
-    background-color: #F6F6F8;
+    /* background-color: #F6F6F8; */
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
     /* height: 10rem; */
 }
 
@@ -120,6 +124,10 @@ footer img:hover {
 }
 
 .contact {
+    background-color: #F6F6F8;
+    max-width: 1140px;
+    min-width: 320px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -181,4 +189,8 @@ footer img:hover {
     .profile-pic img {
         max-width: 80%;
     }
+}
+
+#contact-onclick:hover {
+    cursor: pointer;
 }
