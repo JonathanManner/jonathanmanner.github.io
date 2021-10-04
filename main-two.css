@@ -3,7 +3,8 @@
 /*****-1-Globals-**********************/
 /*****-2-Nav-bar-**********************/
 /*****-3-Main-*************************/
-/**************************************/
+/*****-4-Footer************************/
+/*****-5-Media-Queries*****************/
 /**************************************/
 
 /*****-1-Globals-**********************/
@@ -85,10 +86,33 @@ height: auto;
 
 }
 
+/*****-4-Footer************************/
+
 footer {
     background-color: #F6F6F8;
     height: 10rem;
 }
+
+footer li {
+    list-style: none;
+}
+
+footer img {
+    width: 3rem;
+    margin-right: 0.5rem;
+}
+
+.footer-list {
+    display: flex;
+    justify-content: center;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*****-5-Media-Queries*****************/
 
 @media screen and (max-width: 600px) {
     .flex-container {
