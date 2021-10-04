@@ -142,15 +142,26 @@ footer img:hover {
 
 /*****-5-Mail-form-********************/
 
-/* form {
+.form-flex {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     height: 2rem;
+    border: 3px solid gray; /*DEV*/
 }
 
 .mail-container {
-    margin: auto;
-} */
+    background-color: rgb(221, 21, 21); /*DEV*/
+    position: fixed;
+    top: 30%;
+    bottom: 30%;
+    height: 35%;
+    left: 20%;
+    right: 20%;
+    width: 60%;
+    border: 3px solid orange; /*DEV*/
+    /* visibility: hidden; */
+}
 
 /*****-6-Media-Queries-****************/
 
