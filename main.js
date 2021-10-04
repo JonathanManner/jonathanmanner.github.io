@@ -1,10 +1,13 @@
+/* Show the email contact form on click, and hide it when 
+pressing "X" in the window */
 let contactOnClick = document.getElementById('contact-onclick');
 let body = document.getElementById('body');
+let emailForm = document.getElementById('email-form')
 
-contactOnClick.hidden = true;
+emailForm.hidden = true;
 
 const contactForm = () => {
-    contactOnClick.hidden = false;
-    body.style.backdrop-filter = 'blur(5px)';
+    emailForm.hidden = false;
+    // body.style.backdropFilter = 'blur(5px)';
 }
 contactOnClick.addEventListener('click', contactForm);
