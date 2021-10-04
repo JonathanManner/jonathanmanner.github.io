@@ -4,10 +4,10 @@ let contactOnClick = document.getElementById('contact-onclick');
 let body = document.getElementById('body');
 let emailForm = document.getElementById('email-form')
 
-emailForm.hidden = true;
+emailForm.style.display = 'none';
 
 const contactForm = () => {
-    emailForm.hidden = false;
+    emailForm.style.display = 'block';
     // body.style.backdropFilter = 'blur(5px)';
-}
+};
 contactOnClick.addEventListener('click', contactForm);
