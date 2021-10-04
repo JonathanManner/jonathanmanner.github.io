@@ -126,6 +126,18 @@ footer img:hover {
     padding: 0.5rem 2rem;
 }
 
+.contact-me a {
+    color:#C60021;
+}
+
+.contact-me {
+    transition: all 0.3s ease-out;
+}
+
+.contact-me:hover {
+    transform: scale(1.25);
+}
+
 
 
 /*****-5-Mail-form-********************/
