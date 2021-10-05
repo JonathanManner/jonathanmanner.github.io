@@ -7,6 +7,7 @@
 /*****-5-Mail-form-********************/
 /*****-6-Media-Queries-****************/
 /*****-7-Portfolio-grid-***************/
+/*****-8-Spinner-**********************/
 /**************************************/
 
 /*****-1-Globals-**********************/
@@ -24,15 +25,18 @@ a {
 
 body {
     background-color: #E3E3E3;
-    font-family: Copperplate, Papyrus, fantasy;
+    font-family: 'Georgia';
+    /* font-family: Copperplate, Papyrus, fantasy; */
     max-width: 1140px;
     min-width: 320px;
     margin: auto;
+    line-height: 20px;
 }
 
 h1 {
     text-align: center;
     font-size: 3.5rem;
+    font-family: 'Comic Sans MS';
 }
 
 h2 {
@@ -227,4 +231,57 @@ footer img:hover {
 
 .grid-item {
     border: 1px solid green; /*DEV*/
+}
+
+/*****-8-Spinner-**********************/
+
+.spinner-para {
+    text-align: center;
+    margin: auto;
+}
+
+.spin-btn {
+    border: 1px solid #C60021;
+    color: #F6F6F8;
+    border-radius: 5px;
+    width: 200px;
+    height: 40px;
+    padding: 10px;
+    margin: auto;
+    background-color: #C60021;
+    transition: all 0.1s ease-in-out;
+}
+
+.spin-btn p {
+    text-align: center;
+}
+
+.spin-btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.spin-btn:active {
+    transform: scale(1);
+}
+
+.spinner {
+    border: 8px solid #C60021;
+    border-top: 8px solid #F6F6F8;
+    border-right: 8px solid #C60021;
+    border-bottom: 8px solid #F6F6F8;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1.8s linear infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
