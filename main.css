@@ -254,6 +254,7 @@ footer img:hover {
 
 .spin-btn p {
     text-align: center;
+    user-select: none;
 }
 
 .spin-btn:hover {
