@@ -157,9 +157,6 @@ footer img:hover {
 
 .contact-me:hover {
     transform: scale(1.1);
-}
-
-#contact-onclick:hover {
     cursor: pointer;
 }
 
