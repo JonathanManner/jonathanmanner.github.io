@@ -8,6 +8,6 @@ emailForm.style.display = 'none';
 
 const contactForm = () => {
     emailForm.style.display = 'block';
-    // body.style.backdropFilter = 'blur(5px)';
+    
 };
 contactOnClick.addEventListener('click', contactForm);

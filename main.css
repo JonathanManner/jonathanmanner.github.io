@@ -18,7 +18,7 @@
 a {
     color: black;
     text-decoration: none;
-    transition: color 0.3s ease-out 0.1s;
+    transition: color 0.3s linear;
   }
 
 body {
@@ -50,6 +50,7 @@ span {
 a:hover {
     color: #C60021;
 }
+
 /*****-2-Nav-bar-**********************/
 
 .nav-bar {
@@ -68,7 +69,7 @@ a:hover {
     padding: 20px;
 }
 
-.about a {
+.active-page a {
     color: #C60021;
 }
 
@@ -93,6 +94,12 @@ a:hover {
 max-width: 275px;
 height: auto;
 
+}
+
+.portfolio-para {
+    text-align: center;
+    width: 500px;
+    margin: auto;
 }
 
 /*****-4-Footer-***********************/
@@ -135,7 +142,7 @@ footer img:hover {
     padding: 0.5rem 2rem;
 }
 
-.contact-me a {
+.contact-me {
     color:#C60021;
 }
 
@@ -144,7 +151,11 @@ footer img:hover {
 }
 
 .contact-me:hover {
-    transform: scale(1.25);
+    transform: scale(1.1);
+}
+
+#contact-onclick:hover {
+    cursor: pointer;
 }
 
 
@@ -162,14 +173,12 @@ footer img:hover {
 .mail-container {
     background-color: rgb(221, 21, 21); /*DEV*/
     position: fixed;
-    top: 30%;
-    bottom: 30%;
-    height: 35%;
-    left: 20%;
-    right: 20%;
-    width: 60%;
-    max-width: 450px;
-    max-height: 600px;
+    width: 500px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px; /* Negative half of height. */
+    margin-left: -250px; /* Negative half of width. */ 
     border: 3px solid orange; /*DEV*/
     /* visibility: hidden; */
 }
@@ -189,8 +198,12 @@ footer img:hover {
     .profile-pic img {
         max-width: 80%;
     }
-}
-
-#contact-onclick:hover {
-    cursor: pointer;
+    .mail-container {
+    width: 300px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px; /* Negative half of height. */
+    margin-left: -150px; /* Negative half of width. */ 
+    }
 }
