@@ -6,6 +6,7 @@
 /*****-4-Footer-***********************/
 /*****-5-Mail-form-********************/
 /*****-6-Media-Queries-****************/
+/*****-7-Portfolio-grid-***************/
 /**************************************/
 
 /*****-1-Globals-**********************/
@@ -206,4 +207,24 @@ footer img:hover {
     margin-top: -250px; /* Negative half of height. */
     margin-left: -150px; /* Negative half of width. */ 
     }
+    .portfolio-para {
+        width: 90%;
+    }
+}
+
+/*****-7-Portfolio-grid-***************/
+
+.grid-portfolio-container {
+    display: grid;
+    width: 80%;
+    height: 500px;
+    border: 1px solid orange; /*DEV*/
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    grid-gap: 20px 10px;
+    justify-content: center;
+    margin: auto;
+}
+
+.grid-item {
+    border: 1px solid green; /*DEV*/
 }
