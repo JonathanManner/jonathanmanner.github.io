@@ -163,6 +163,10 @@ footer img:hover {
     cursor: pointer;
 }
 
+.contact-me:active {
+    transform: scale(1);
+}
+
 
 
 /*****-5-Mail-form-********************/
@@ -186,6 +190,16 @@ footer img:hover {
     margin-left: -250px; /* Negative half of width. */ 
     border: 3px solid orange; /*DEV*/
     /* visibility: hidden; */
+}
+
+.closing-cross {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.closing-cross:hover {
+    cursor: pointer;
 }
 
 /*****-6-Media-Queries-****************/
