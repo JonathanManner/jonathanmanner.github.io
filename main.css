@@ -52,6 +52,10 @@ a:hover {
 }
 /*****-2-Nav-bar-**********************/
 
+.nav-bar {
+    border-bottom: 1px solid #C60021;
+}
+
 .nav-list li {
     list-style-type: none;
     margin-left: 0.5rem;
@@ -62,7 +66,6 @@ a:hover {
     display: flex;
     justify-content: end;
     padding: 20px;
-    border-bottom: 1px solid #C60021;
 }
 
 .about a {
@@ -95,12 +98,10 @@ height: auto;
 /*****-4-Footer-***********************/
 
 footer {
-    /* background-color: #F6F6F8; */
     position: fixed;
     right: 0;
     left: 0;
     bottom: 0;
-    /* height: 10rem; */
 }
 
 footer li {
@@ -181,7 +182,6 @@ footer img:hover {
     }
     .nav-list {
         justify-content: center;
-        margin-right: 20px;
     }
     h1 {
         font-size: 2rem;
