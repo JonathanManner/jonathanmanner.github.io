@@ -1,7 +1,7 @@
 /* Global Variable Declarations */
 let contactBtn = document.getElementById('contact-me');
 let body = document.getElementById('body');
-let emailForm = document.getElementById('email-form')
+let emailForm = document.getElementById('contact-popup')
 let spinBtn = document.getElementById('spin-btn');
 let spinner = document.getElementById('spinner');
 let emailCross = document.getElementById('closing-cross');

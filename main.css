@@ -168,15 +168,7 @@ footer img:hover {
 
 /*****-5-Mail-form-********************/
 
-.form-flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    height: 2rem;
-    border: 3px solid gray; /*DEV*/
-}
-
-.mail-container {
+.contact-popup {
     background-color: rgb(221, 21, 21); /*DEV*/
     position: fixed;
     width: 500px;
