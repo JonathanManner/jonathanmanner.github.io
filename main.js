@@ -20,6 +20,11 @@ emailCross.addEventListener("click", emailHide);
 contactBtn.addEventListener("click", emailShow);
 
 /* Logic for the spinner */
+/* Will show the spinner one second */
+/* after the button is pressed, unless */
+/* the button is pressed again before */
+/* 1 second has passes, in which case it */
+/* will reset the timer. */
 
 spinner.style.display = "none";
 
