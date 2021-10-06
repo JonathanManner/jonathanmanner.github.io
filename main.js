@@ -9,7 +9,7 @@ let emailCross = document.getElementById("closing-cross");
 /* Hiding and showing the contact form */
 emailForm.style.display = "none";
 
-const contactForm = () => {
+const emailShow = () => {
   emailForm.style.display = "block";
 };
 const emailHide = () => {
@@ -17,7 +17,7 @@ const emailHide = () => {
 };
 
 emailCross.addEventListener("click", emailHide);
-contactBtn.addEventListener("click", contactForm);
+contactBtn.addEventListener("click", emailShow);
 
 /* Logic for the spinner */
 

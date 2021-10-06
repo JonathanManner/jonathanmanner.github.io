@@ -1,4 +1,4 @@
-/*gray = #E3E3E3, off-white = #F6F6F8, touch of red = #C60021*/
+/*gray = #E3E3E3, off-white = #F6F6F8, red = #C60021*/
 /**************************************/
 /*****-1-Globals-**********************/
 /*****-2-Nav-bar-**********************/
@@ -173,7 +173,6 @@ footer img:hover {
   margin-top: -100px; /* Negative half of height. */
   margin-left: -250px; /* Negative half of width. */
   border: 3px solid orange; /*DEV*/
-  /* visibility: hidden; */
 }
 
 .closing-cross {
@@ -216,20 +215,38 @@ footer img:hover {
 
 /*****-7-Portfolio-grid-***************/
 
+/*TODO Clean up when adding projects*/
+
 .grid-portfolio-container {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   width: 80%;
   height: 500px;
   border: 1px solid orange; /*DEV*/
-  grid-template: repeat(3, 1fr) / repeat(2, 1fr);
-  grid-gap: 20px 10px;
   justify-content: center;
   margin: auto;
 }
 
 .grid-item {
   border: 1px solid green; /*DEV*/
+  display: flex;
+  margin: 10px;
+  max-width: 300px;
+  justify-content: center;
+  align-items: center;
 }
+
+.description h3 {
+    text-align: center;
+    wi
+}
+
+.project-img {
+    width: 100px;
+    height: 100px;
+}
+
+
 
 /*****-8-Spinner-**********************/
 
