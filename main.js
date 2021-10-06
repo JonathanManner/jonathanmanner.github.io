@@ -7,13 +7,13 @@ let spinner = document.getElementById("spinner");
 let emailCross = document.getElementById("closing-cross");
 
 /* Hiding and showing the contact form */
-emailForm.style.display = "none";
+// emailForm.style.display = "none";
 
 const emailShow = () => {
-  emailForm.style.display = "block";
+  emailForm.style.visibility = "visible";
 };
 const emailHide = () => {
-  emailForm.style.display = "none";
+  emailForm.style.visibility = "hidden";
 };
 
 emailCross.addEventListener("click", emailHide);
@@ -26,13 +26,13 @@ contactBtn.addEventListener("click", emailShow);
 /* 1 second has passes, in which case it */
 /* will reset the timer. */
 
-spinner.style.display = "none";
+// spinner.style.display = "none";
 
 let timer;
 spinBtn.onclick = function () {
-  spinner.style.display = "none";
+  spinner.style.visibility = "hidden";
   clearTimeout(timer);
   timer = setTimeout(function () {
-    spinner.style.display = "block";
+    spinner.style.visibility = "visible";
   }, 1000);
 };

@@ -184,6 +184,7 @@ footer img:hover {
   margin-top: -100px; /* Negative half of height. */
   margin-left: -250px; /* Negative half of width. */
   border: 3px solid orange; /*DEV*/
+  visibility: hidden;
 }
 
 .closing-cross {
@@ -321,6 +322,7 @@ footer img:hover {
   height: 50px;
   animation: spin 1.8s linear infinite;
   margin: auto;
+  visibility: hidden;
 }
 
 @keyframes spin {
