@@ -36,7 +36,7 @@ body {
 h1 {
   text-align: center;
   font-size: 3.5rem;
-  font-family: "Comic Sans MS";
+  font-family: sans-serif;
 }
 
 h2 {
@@ -221,24 +221,42 @@ footer img:hover {
   display: flex;
   flex-wrap: wrap;
   width: 80%;
-  height: 500px;
-  border: 1px solid orange; /*DEV*/
+  /* height: 500px; */
   justify-content: center;
   margin: auto;
 }
 
 .grid-item {
-  border: 1px solid green; /*DEV*/
   display: flex;
   margin: 10px;
   max-width: 300px;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+
+.grid-item:hover {
+    transform: scale(1.0225);
+}
+
+.grid-item:active {
+    transform: scale(1);
+}
+
+.flex-portfolio-item {
+
+}
+
+.project-img {
+    margin-right: 10px;
+}
+
+.project-img img {
+    width: 100px;
 }
 
 .description h3 {
     text-align: center;
-    wi
 }
 
 .project-img {
