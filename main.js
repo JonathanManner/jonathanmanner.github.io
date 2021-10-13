@@ -21,7 +21,9 @@ emailCross.addEventListener("click", emailHide);
 contactBtn.addEventListener("click", emailShow);
 
 /* Links for the grid items */
-localWindsCell.addEventListener("click", () => {location.href='project-local-winds/index.html'});
+localWindsCell.addEventListener("click", () => {
+  location.href = "project-local-winds/index.html";
+});
 
 /* Logic for the spinner */
 /* Will show the spinner one second */
@@ -40,5 +42,3 @@ spinBtn.onclick = function () {
     spinner.style.visibility = "visible";
   }, 1000);
 };
-
-

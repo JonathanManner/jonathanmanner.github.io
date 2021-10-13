@@ -101,13 +101,13 @@ a:hover {
 }
 
 .profile-pic img:active {
-    animation: twirl 2s linear;
+  animation: twirl 2s linear;
 }
 
 @keyframes twirl {
-    100% {
-        transform: rotate3d(1, 1, 1, 360deg);
-    }
+  100% {
+    transform: rotate3d(1, 1, 1, 360deg);
+  }
 }
 
 .portfolio-para {
@@ -248,38 +248,33 @@ footer img:hover {
   user-select: none;
 }
 
-
-
 .grid-item:hover {
-    transform: scale(1.0225);
+  transform: scale(1.0225);
 }
 
 .grid-item:active {
-    transform: scale(1);
+  transform: scale(1);
 }
 
 .flex-portfolio-item {
-
 }
 
 .project-img {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .project-img img {
-    width: 100px;
+  width: 100px;
 }
 
 .description h3 {
-    text-align: center;
+  text-align: center;
 }
 
 .project-img {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
 }
-
-
 
 /*****-8-Spinner-**********************/
 
