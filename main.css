@@ -248,6 +248,8 @@ footer img:hover {
   user-select: none;
 }
 
+
+
 .grid-item:hover {
     transform: scale(1.0225);
 }

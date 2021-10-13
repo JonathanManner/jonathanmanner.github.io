@@ -5,6 +5,7 @@ let emailForm = document.getElementById("contact-popup");
 let spinBtn = document.getElementById("spin-btn");
 let spinner = document.getElementById("spinner");
 let emailCross = document.getElementById("closing-cross");
+let localWindsCell = document.getElementById("local-winds");
 
 /* Hiding and showing the contact form */
 // emailForm.style.display = "none";
@@ -18,6 +19,9 @@ const emailHide = () => {
 
 emailCross.addEventListener("click", emailHide);
 contactBtn.addEventListener("click", emailShow);
+
+/* Links for the grid items */
+localWindsCell.addEventListener("click", () => {location.href='project-local-winds/index.html'});
 
 /* Logic for the spinner */
 /* Will show the spinner one second */
@@ -36,3 +40,5 @@ spinBtn.onclick = function () {
     spinner.style.visibility = "visible";
   }, 1000);
 };
+
+
