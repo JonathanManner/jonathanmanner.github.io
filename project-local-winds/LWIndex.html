@@ -22,10 +22,23 @@
     </header>
     <main>
       <div class="spacer"></div>
-      <button type="button" id="current-wind-btn">Click Me!</button>
+      <button type="button" id="current-wind-btn" class="lw-button"><div class="lw">Show current wind</div></button>
       <div class="windcontainer">
         <div class="wind-data">
-          <div class="arrow">live arror placeholder -></div>
+            <div id="arrowAnim">
+                <div class="arrowSliding">
+                  <div class="arrow"></div>
+                </div>
+                <div class="arrowSliding delay1">
+                  <div class="arrow"></div>
+                </div>
+                <div class="arrowSliding delay2">
+                  <div class="arrow"></div>
+                </div>
+                <div class="arrowSliding delay3">
+                  <div class="arrow"></div>
+                </div>
+              </div>
           <p>Click the button to show live wind direction at Lisö</p>
           <div class="text" id="json-output">east</div>
           <div class="spinner" id="fetch-spinner"></div>

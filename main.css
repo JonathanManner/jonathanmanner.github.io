@@ -300,9 +300,11 @@ footer img:hover {
   user-select: none;
 }
 
+@media (hover: hover) {
 .spin-btn:hover {
   cursor: pointer;
   transform: scale(1.1);
+}
 }
 
 .spin-btn:active {

@@ -6,9 +6,15 @@
 const requestBtn = document.getElementById("current-wind-btn");
 const apiOutput = document.getElementById("json-output");
 const fetchSpinner = document.getElementById("fetch-spinner");
+const windArrow = document.getElementById("arrowAnim");
 let windDataHolder;
 // TODO <-- Remove when going live.
 // fetchSpinner.style.visibility = "visible";
+const animateArrow = () => {
+    // windDataHolder["timeSeries"][0]["parameters"]["13"]["values"]["0"] += 45;
+    windArrow.style.transform = `rotate(${windDataHolder["timeSeries"][0]["parameters"]["13"]["values"]["0"] + 45}deg)`;
+    windArrow.style.visibility = "visible";
+}
 
 // Fetch weather data from SMHI
 const fetchData = async () => {
@@ -22,6 +28,7 @@ const fetchData = async () => {
   );
   windDataHolder = await response.json(); //extract JSON from the http response
   apiOutput.innerHTML = `Wind direction: ${windDataHolder["timeSeries"][0]["parameters"]["13"]["values"]["0"]} degrees at ${windDataHolder["timeSeries"][0]["parameters"]["14"]["values"]["0"]} m/s`;
+  animateArrow();
   clearTimeout(time);
   fetchSpinner.style.visibility = "hidden";
 };
