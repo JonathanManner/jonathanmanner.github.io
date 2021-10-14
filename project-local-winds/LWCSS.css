@@ -23,6 +23,18 @@
   }
 }
 
+ /* flex */
+ .wind-data {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     
+ }
+
+ .windcontainer {
+    
+}
+
 /* Buttons */
 .lw-button {
     border: 1px solid #c60021;
