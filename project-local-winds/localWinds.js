@@ -11,8 +11,9 @@ let windDataHolder;
 // TODO <-- Remove when going live.
 // fetchSpinner.style.visibility = "visible";
 const animateArrow = () => {
-    // windDataHolder["timeSeries"][0]["parameters"]["13"]["values"]["0"] += 90;
-    windArrow.style.transform = `rotate(${windDataHolder["timeSeries"][0]["parameters"]["13"]["values"]["0"] + 90}deg)`;
+    //add +90 to wind degrees to compensate for animation :)
+    //and add 180 degrees to point the arrow to where the wind blows. Not to where it comes from.
+    windArrow.style.transform = `rotate(${windDataHolder["timeSeries"][0]["parameters"]["13"]["values"]["0"] + 270}deg)`;
     windArrow.style.visibility = "visible";
 }
 
