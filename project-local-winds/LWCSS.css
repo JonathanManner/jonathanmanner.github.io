@@ -1,7 +1,7 @@
 /* Spinner */
 /* solid linear-gradient(90deg, rgba(198,0,33,1) 0%, rgba(82,128,255,1) 100%); */
 
-.spinner {
+.fetch-spinner {
   border: 8px solid #c60021;
   border-top: 8px solid #e3e3e3;
   border-right: 8px solid #c60021;
