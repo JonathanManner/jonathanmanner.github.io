@@ -1,10 +1,14 @@
 // complete data from lisö (59 lat 18 lon)
 // https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/18/lat/59/data.json
 //
-//windDataHolder["timeSeries"][0]["parameters"]["3"]
+//windDataHolder["timeSeries"][0]["parameters"]["13"]["values"]["0"] === wind direction(degrees)
+//windDataHolder["timeSeries"][0]["parameters"]["10"]["values"]["0"] === temperature(celcius)
+//windDataHolder["timeSeries"][0]["parameters"]["14"]["values"]["0"] === wind speed (m/s)
+//windDataHolder["timeSeries"][0]["parameters"]["11"]["values"]["0"] === air pressure (hPa)
 
 const requestBtn = document.getElementById("current-wind-btn");
-const apiOutput = document.getElementById("json-output");
+const apiOutputOne = document.getElementById("json-output-1");
+const apiOutputTwo = document.getElementById("json-output-2");
 const fetchSpinner = document.getElementById("fetch-spinner");
 const windArrow = document.getElementById("arrowAnim");
 let windDataHolder;
@@ -28,7 +32,8 @@ const fetchData = async () => {
     "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/18/lat/59/data.json"
   );
   windDataHolder = await response.json(); //extract JSON from the http response
-  apiOutput.innerHTML = `Wind direction: ${windDataHolder["timeSeries"][0]["parameters"]["13"]["values"]["0"]} degrees at ${windDataHolder["timeSeries"][0]["parameters"]["14"]["values"]["0"]} m/s`;
+  apiOutputOne.innerHTML = `Wind direction: ${windDataHolder["timeSeries"][0]["parameters"]["13"]["values"]["0"]} degrees at ${windDataHolder["timeSeries"][0]["parameters"]["14"]["values"]["0"]} m/s`;
+  apiOutputTwo.innerHTML = `Outdoor temperature: ${windDataHolder["timeSeries"][0]["parameters"]["10"]["values"]["0"]} degrees. Air pressure: ${windDataHolder["timeSeries"][0]["parameters"]["11"]["values"]["0"]} hPa`;
   animateArrow();
   clearTimeout(time);
   fetchSpinner.style.visibility = "hidden";
