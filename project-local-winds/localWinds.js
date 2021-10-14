@@ -11,8 +11,8 @@ let windDataHolder;
 // TODO <-- Remove when going live.
 // fetchSpinner.style.visibility = "visible";
 const animateArrow = () => {
-    // windDataHolder["timeSeries"][0]["parameters"]["13"]["values"]["0"] += 45;
-    windArrow.style.transform = `rotate(${windDataHolder["timeSeries"][0]["parameters"]["13"]["values"]["0"] + 45}deg)`;
+    // windDataHolder["timeSeries"][0]["parameters"]["13"]["values"]["0"] += 90;
+    windArrow.style.transform = `rotate(${windDataHolder["timeSeries"][0]["parameters"]["13"]["values"]["0"] + 90}deg)`;
     windArrow.style.visibility = "visible";
 }
 

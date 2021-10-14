@@ -22,30 +22,29 @@
     </header>
     <main>
       <div class="spacer"></div>
-      <div class="wind-flex">
-      <div class="windcontainer">
-        <div class="wind-data">
-            <button type="button" id="current-wind-btn" class="lw-button"><div class="lw">Show current wind</div></button>
-            <div id="arrowAnim">
-                <div class="arrowSliding">
-                  <div class="arrow"></div>
-                </div>
-                <div class="arrowSliding delay1">
-                  <div class="arrow"></div>
-                </div>
-                <div class="arrowSliding delay2">
-                  <div class="arrow"></div>
-                </div>
-                <div class="arrowSliding delay3">
-                  <div class="arrow"></div>
-                </div>
-              </div>
-          <p>Click the button to show live wind direction at Lisö</p>
-          <div class="text" id="json-output">---wind---</div>
-          <div class="spinner" id="fetch-spinner"></div>
+
+      <div class="wind-data">
+        <button type="button" id="current-wind-btn" class="lw-button">
+          <div class="lw">Show current wind</div>
+        </button>
+        <div id="arrowAnim">
+          <div class="arrowSliding">
+            <div class="arrow"></div>
+          </div>
+          <div class="arrowSliding delay1">
+            <div class="arrow"></div>
+          </div>
+          <div class="arrowSliding delay2">
+            <div class="arrow"></div>
+          </div>
+          <div class="arrowSliding delay3">
+            <div class="arrow"></div>
+          </div>
         </div>
+        <p>Click the button to show live wind direction at Lisö</p>
+        <div class="text" id="json-output">---wind---</div>
+        <div class="spinner" id="fetch-spinner"></div>
       </div>
-    </div>
     </main>
     <footer>
       <!-- TODO, ADD EMAIL FORM WITH SERVER -->
