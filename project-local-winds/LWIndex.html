@@ -6,11 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="/project-local-winds/localWinds.js" defer></script>
     <link rel="stylesheet" href="/project-local-winds/LWCSS.css" />
+    <link rel="stylesheet" href="/main.css" />
     <title>Local Winds</title>
   </head>
   <body>
-    <header></header>
+    <header>
+      <div class="nav-bar">
+        <ul class="nav-list">
+          <li><a href="/index.html">About</a></li>
+          <li><a href="/portfolio.html">Portfolio</a></li>
+          <li><a href="/spinner.html">Spinner</a></li>
+          <li class="active-page"><a href="#">Local Winds</a></li>
+        </ul>
+      </div>
+    </header>
     <main>
+      <div class="spacer"></div>
       <button type="button" id="current-wind-btn">Click Me!</button>
       <div class="windcontainer">
         <div class="wind-data">
@@ -21,6 +32,33 @@
         </div>
       </div>
     </main>
-    <footer></footer>
+    <footer>
+      <!-- TODO, ADD EMAIL FORM WITH SERVER -->
+      <div class="contact">
+        <h3 class="contact-me" id="contact-me">Contact Me</h3>
+        <div class="contact-popup" id="contact-popup">
+          <div class="closing-cross" id="closing-cross">X</div>
+          <p>DEVELOPMENT</p>
+        </div>
+        <ul class="footer-list">
+          <li>
+            <a
+              href="https://www.linkedin.com/in/jonathan-manner-a9a468138/"
+              target="_blank"
+              ><img
+                src="/images/5296501_linkedin_network_linkedin logo_icon.png"
+                alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="https://github.com/JonathanManner" target="_blank"
+              ><img
+                src="/images/4202098_github_code_developer_logo_icon.png"
+                alt=""
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

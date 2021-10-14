@@ -12,7 +12,7 @@ let windDataHolder;
 
 // Fetch weather data from SMHI
 const fetchData = async () => {
-// if the request takes longer than 80ms, show a spinner, otherwise, don't.
+  // if the request takes longer than 80ms, show a spinner, otherwise, don't.
   let time = setTimeout(() => {
     fetchSpinner.style.visibility = "visible";
     apiOutput.innerHTML = "Loading...";
@@ -21,7 +21,7 @@ const fetchData = async () => {
     "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/18/lat/59/data.json"
   );
   windDataHolder = await response.json(); //extract JSON from the http response
-  apiOutput.innerHTML = `Wind direction(degrees): ${windDataHolder["timeSeries"][0]["parameters"]["3"]["values"]["0"]}`;
+  apiOutput.innerHTML = `Wind direction: ${windDataHolder["timeSeries"][0]["parameters"]["13"]["values"]["0"]} degrees at ${windDataHolder["timeSeries"][0]["parameters"]["14"]["values"]["0"]} m/s`;
   clearTimeout(time);
   fetchSpinner.style.visibility = "hidden";
 };
