@@ -22,7 +22,7 @@ contactBtn.addEventListener("click", emailShow);
 
 /* Links for the grid items */
 localWindsCell.addEventListener("click", () => {
-  location.href = "project-local-winds/index.html";
+  location.href = "project-local-winds/LWIndex.html";
 });
 
 /* Logic for the spinner */
