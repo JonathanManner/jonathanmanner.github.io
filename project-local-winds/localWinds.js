@@ -13,17 +13,9 @@ const tempOutput = document.getElementById("json-output-3");
 const airPressureOutput = document.getElementById("json-output-4");
 const fetchSpinner = document.getElementById("fetch-spinner");
 const windArrow = document.getElementById("arrowAnim");
+
 let isStarted = false;
 // const latestForecastRoot = '${tempWeatherData["timeSeries"][0]["parameters"]';
-
-const forecastVariables = {
-  constructor(direction, speed, temp, pressure) {
-  windDirection: this.direction,
-  windSpeed: this.speed,
-  outdoorTemp: this.temp,
-  airPressure: this.pressure
-  }
-}
 
 const animateArrow = () => {
   //add +90 to wind degrees to compensate for animation :)
@@ -39,6 +31,19 @@ const throttleReqest = () => {
   setTimeout(() => {
     isStarted = false;
   }, 2000); //Mitigate unnecessary requests.
+};
+
+const generateJson = async () => {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/users");
+    if (response.ok) {
+      const jsonResponse = await response.json();
+      renderResponse(jsonResponse);
+      changeButton();
+    }
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 const renderResponse = tempWeatherData => {
