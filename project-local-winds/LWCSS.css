@@ -31,9 +31,6 @@
      
  }
 
- .windcontainer {
-    
-}
 
 /* Buttons */
 .lw-button {
@@ -141,6 +138,6 @@
   @keyframes slide {
       0% { opacity:0; transform: translateX(2rem); }  
      20% { opacity:1; transform: translateX(1rem); } 
-     80% { opacity:1; transform: translateX(-1rem; }  
+     80% { opacity:1; transform: translateX(-1rem); }  
     100% { opacity:0; transform: translateX(-2rem); } 
   }

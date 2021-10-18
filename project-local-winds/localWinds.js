@@ -27,10 +27,23 @@ const animateArrow = () => {
 };
 
 const throttleReqest = () => {
-    isStarted = true;
-    setTimeout(() => {
-        isStarted = false;
-    }, 36000); //How often the button can fetch from the API
+  isStarted = true;
+  setTimeout(() => {
+    isStarted = false;
+  }, 36000); //How often the button can fetch from the API
+};
+
+const generateJson = async () => {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/users");
+    if (response.ok) {
+      const jsonResponse = await response.json();
+      renderResponse(jsonResponse);
+      changeButton();
+    }
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 // Fetch weather data from SMHI
@@ -45,19 +58,23 @@ const fetchData = async () => {
       apiOutputOne.innerHTML = "Loading...";
       apiOutputTwo.innerHTML = " ";
     }, 80);
-    const response = await fetch(
-      "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/18/lat/59/data.json"
-    );
-    windDataHolder = await response.json(); //extract JSON from the http response
-    apiOutputWindDir.innerHTML = `Wind direction: ${windDataHolder["timeSeries"][0]["parameters"]["13"]["values"]["0"]} degrees.`;
-    apiOutputWindSpeed.innerHTML = `Wind speed: ${windDataHolder["timeSeries"][0]["parameters"]["14"]["values"]["0"]} m/s.`;
-    apiOutputTemp.innerHTML = `Outdoor temperature: ${windDataHolder["timeSeries"][0]["parameters"]["10"]["values"]["0"]} degrees.`;
-    apiOutputAirPressure.innerHTML = `Air pressure: ${windDataHolder["timeSeries"][0]["parameters"]["11"]["values"]["0"]} hPa`;
-    animateArrow();
-    clearTimeout(time);
-    fetchSpinner.style.visibility = "hidden";
-  } else {
-      console.log('error');
+    try {
+      const response = await fetch(
+        "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/18/lat/59/data.json"
+      );
+      if (response.ok) {
+        windDataHolder = await response.json(); //extract JSON from the http response
+        apiOutputWindDir.innerHTML = `Wind direction: ${windDataHolder["timeSeries"][0]["parameters"]["13"]["values"]["0"]} degrees.`;
+        apiOutputWindSpeed.innerHTML = `Wind speed: ${windDataHolder["timeSeries"][0]["parameters"]["14"]["values"]["0"]} m/s.`;
+        apiOutputTemp.innerHTML = `Outdoor temperature: ${windDataHolder["timeSeries"][0]["parameters"]["10"]["values"]["0"]} degrees.`;
+        apiOutputAirPressure.innerHTML = `Air pressure: ${windDataHolder["timeSeries"][0]["parameters"]["11"]["values"]["0"]} hPa`;
+        animateArrow();
+        clearTimeout(time);
+        fetchSpinner.style.visibility = "hidden";
+      }
+    } catch (error) {
+      console.log(error);
+    }
   }
 };
 
