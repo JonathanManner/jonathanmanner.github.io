@@ -21,7 +21,7 @@ const animateArrow = () => {
   //add +90 to wind degrees to compensate for animation :)
   //and add 180 degrees to point the arrow to where the wind blows. Not to where it comes from.
   windArrow.style.transform = `rotate(${
-    tempWeatherData["timeSeries"][0]["parameters"][13]["values"][0] + 270
+    tempWeatherData["timeSeries"][0]["parameters"][3]["values"][0] + 270
   }deg)`;
   windArrow.style.visibility = "visible";
 };
@@ -47,10 +47,10 @@ const generateJson = async () => {
 };
 
 const renderResponse = tempWeatherData => {
-  windDirOutput.innerHTML = `Wind direction: ${tempWeatherData["timeSeries"][0]["parameters"][13]["values"][0]} degrees.`;
-  windSpeedOutput.innerHTML = `Wind speed: ${tempWeatherData["timeSeries"][0]["parameters"][14]["values"][0]} m/s.`;
-  tempOutput.innerHTML = `Outdoor temperature: ${tempWeatherData["timeSeries"][0]["parameters"][10]["values"][0]} degrees.`;
-  airPressureOutput.innerHTML = `Air pressure: ${tempWeatherData["timeSeries"][0]["parameters"][11]["values"][0]} hPa`;
+  windDirOutput.innerHTML = `Wind direction: ${tempWeatherData["timeSeries"][0]["parameters"][3]["values"][0]} degrees.`;
+  windSpeedOutput.innerHTML = `Wind speed: ${tempWeatherData["timeSeries"][0]["parameters"][4]["values"][0]} m/s.`;
+  tempOutput.innerHTML = `Outdoor temperature: ${tempWeatherData["timeSeries"][0]["parameters"][0]["values"][0]} degrees.`;
+  airPressureOutput.innerHTML = `Air pressure: ${tempWeatherData["timeSeries"][0]["parameters"][1]["values"][0]} hPa`;
 };
 
 // Fetch weather data from SMHI

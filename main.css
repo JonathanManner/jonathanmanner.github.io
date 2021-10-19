@@ -138,7 +138,7 @@ footer img {
 }
 
 footer img:hover {
-  transform: scale(1.25);
+  transform: scale(1.125);
 }
 
 .footer-list {
@@ -166,7 +166,7 @@ footer img:hover {
 }
 
 .contact-me:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   cursor: pointer;
 }
 
