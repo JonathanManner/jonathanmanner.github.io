@@ -45,6 +45,10 @@ h2 {
   padding-bottom: 1rem;
 }
 
+h3 {
+  text-align: center;
+}
+
 span {
   color: #c60021;
 }

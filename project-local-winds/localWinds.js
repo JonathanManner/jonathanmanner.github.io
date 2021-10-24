@@ -42,21 +42,14 @@ const throttleReqest = () => {
   }, 2000); //Mitigate unnecessary requests.
 };
 
-//a way to get correct value regardless of order?
-// getCorrectValue('t');
-// const getCorrectValue = (parameter) => {
-//   let temperature = tempWeatherData["timeSeries"][0]["parameters"].filter(x => x.name.includes(parameter));
-//   return temperature;
-// }
-
-const renderResponse = tempWeatherData => {
-  windDirOutput.innerHTML = `Wind direction: ${formattedWeatherData["wd"]["values"][0]} degrees.`;
-  windSpeedOutput.innerHTML = `Wind speed: ${formattedWeatherData["ws"]["values"][0]} m/s.`;
-  tempOutput.innerHTML = `Outdoor temperature: ${formattedWeatherData["t"]["values"][0]} degrees.`;
-  airPressureOutput.innerHTML = `Air pressure: ${formattedWeatherData["msl"]["values"][0]} hPa`;
+const renderResponse = (latestForecastParameters) => {
+  windDirOutput.innerHTML = `Wind direction: ${latestForecastParameters["wd"]["values"][0]} degrees.`;
+  windSpeedOutput.innerHTML = `Wind speed: ${latestForecastParameters["ws"]["values"][0]} m/s.`;
+  tempOutput.innerHTML = `Outdoor temperature: ${latestForecastParameters["t"]["values"][0]} degrees.`;
+  airPressureOutput.innerHTML = `Air pressure: ${latestForecastParameters["msl"]["values"][0]} hPa`;
 };
 
-let formattedWeatherData;
+// let formattedWeatherData;
 
 // Fetch weather data from SMHI
 const fetchData = async () => {
@@ -76,10 +69,8 @@ const fetchData = async () => {
       );
       if (response.ok) {
         tempWeatherData = await response.json(); //extract JSON from the http response
-        // console.log(tempWeatherData)
-        formattedWeatherData = formatData(tempWeatherData["timeSeries"][0]["parameters"]);
-        // console.log(formattedWeatherData);
-        renderResponse(tempWeatherData);
+        const formattedWeatherData = formatData(tempWeatherData["timeSeries"][0]["parameters"]);
+        renderResponse(formattedWeatherData);
         animateArrow();
         clearTimeout(time);
         fetchSpinner.style.visibility = "hidden";
