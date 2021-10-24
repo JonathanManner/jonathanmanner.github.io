@@ -6,6 +6,7 @@
 //windDataHolder["timeSeries"][0]["parameters"]["14"]["values"]["0"] === wind speed (m/s)
 //windDataHolder["timeSeries"][0]["parameters"]["11"]["values"]["0"] === air pressure (hPa)
 
+
 const requestBtn = document.getElementById("current-wind-btn");
 const windDirOutput = document.getElementById("json-output-1");
 const windSpeedOutput = document.getElementById("json-output-2");
@@ -26,6 +27,14 @@ const animateArrow = () => {
   windArrow.style.visibility = "visible";
 };
 
+const formatData = (data) => {
+  const weatherObject = {};
+  for(let i = 0; i < data.length; i++) {
+    weatherObject[data[i].name] = data[i];
+  }
+  return weatherObject;
+}
+
 const throttleReqest = () => {
   isStarted = true;
   setTimeout(() => {
@@ -33,25 +42,21 @@ const throttleReqest = () => {
   }, 2000); //Mitigate unnecessary requests.
 };
 
-const generateJson = async () => {
-  try {
-    const response = await fetch("https://jsonplaceholder.typicode.com/users");
-    if (response.ok) {
-      const jsonResponse = await response.json();
-      renderResponse(jsonResponse);
-      changeButton();
-    }
-  } catch (error) {
-    console.log(error);
-  }
-};
+//a way to get correct value regardless of order?
+// getCorrectValue('t');
+// const getCorrectValue = (parameter) => {
+//   let temperature = tempWeatherData["timeSeries"][0]["parameters"].filter(x => x.name.includes(parameter));
+//   return temperature;
+// }
 
 const renderResponse = tempWeatherData => {
-  windDirOutput.innerHTML = `Wind direction: ${tempWeatherData["timeSeries"][0]["parameters"][3]["values"][0]} degrees.`;
-  windSpeedOutput.innerHTML = `Wind speed: ${tempWeatherData["timeSeries"][0]["parameters"][4]["values"][0]} m/s.`;
-  tempOutput.innerHTML = `Outdoor temperature: ${tempWeatherData["timeSeries"][0]["parameters"][0]["values"][0]} degrees.`;
-  airPressureOutput.innerHTML = `Air pressure: ${tempWeatherData["timeSeries"][0]["parameters"][1]["values"][0]} hPa`;
+  windDirOutput.innerHTML = `Wind direction: ${formattedWeatherData["wd"]["values"][0]} degrees.`;
+  windSpeedOutput.innerHTML = `Wind speed: ${formattedWeatherData["ws"]["values"][0]} m/s.`;
+  tempOutput.innerHTML = `Outdoor temperature: ${formattedWeatherData["t"]["values"][0]} degrees.`;
+  airPressureOutput.innerHTML = `Air pressure: ${formattedWeatherData["msl"]["values"][0]} hPa`;
 };
+
+let formattedWeatherData;
 
 // Fetch weather data from SMHI
 const fetchData = async () => {
@@ -71,6 +76,9 @@ const fetchData = async () => {
       );
       if (response.ok) {
         tempWeatherData = await response.json(); //extract JSON from the http response
+        // console.log(tempWeatherData)
+        formattedWeatherData = formatData(tempWeatherData["timeSeries"][0]["parameters"]);
+        // console.log(formattedWeatherData);
         renderResponse(tempWeatherData);
         animateArrow();
         clearTimeout(time);
