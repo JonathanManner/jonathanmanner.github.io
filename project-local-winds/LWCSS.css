@@ -28,7 +28,11 @@
      display: flex;
      flex-direction: column;
      align-items: center;
-     
+     margin: auto;
+ }
+
+ .outer-weather-container {
+   display: flex;
  }
 
 
@@ -91,7 +95,7 @@
   }
 
   /* Arrow animation */
-  #arrowAnim {
+  .arrowAnim {
     width: 5rem;
     height: 5rem;
     display: flex;

@@ -21,13 +21,14 @@
     <main>
       <div class="spacer"></div>
 
+      <div class="outer-weather-container">
       <div class="wind-data">
-        <h3>Click the button to show the latest forecast at Lisö</h3>
+        <h3>Forecast at Lisö</h3>
         <div class="spacer"></div>
-        <button type="button" id="current-wind-btn" class="lw-button">
-          <div class="lw">Show weather data</div>
+        <button type="button" id="liso-wind-btn" class="lw-button">
+          <div class="lw">Fetch data </div>
         </button>
-        <div id="arrowAnim">
+        <div id="lisoArrowAnim" class="arrowAnim">
           <div class="arrowSliding">
             <div class="arrow"></div>
           </div>
@@ -48,6 +49,36 @@
         <div class="text" id="json-output-4">---pressure---</div>
         <div class="fetch-spinner" id="fetch-spinner"></div>
       </div>
+      <div class="wind-data">
+        <h3>Forecast at Falun</h3>
+        <div class="spacer"></div>
+        <button type="button" id="falun-wind-btn" class="lw-button">
+          <div class="lw">Fetch data</div>
+        </button>
+        <div id="lisoArrowAnim" class="arrowAnim">
+          <div class="arrowSliding">
+            <div class="arrow"></div>
+          </div>
+          <div class="arrowSliding delay1">
+            <div class="arrow"></div>
+          </div>
+          <div class="arrowSliding delay2">
+            <div class="arrow"></div>
+          </div>
+          <div class="arrowSliding delay3">
+            <div class="arrow"></div>
+          </div>
+        </div>
+        <p>Falun:</p>
+        <div class="text" id="json-output-5">---direction---</div>
+        <div class="text" id="json-output-6">---speed---</div>
+        <div class="text" id="json-output-7">---temp---</div>
+        <div class="text" id="json-output-8">---pressure---</div>
+        <div class="fetch-spinner" id="fetch-spinner"></div>
+      </div>
+
+      <div class="spacer"></div>
+    </div>
     </main>
     <footer>
       <!-- TODO, ADD EMAIL FORM WITH SERVER -->

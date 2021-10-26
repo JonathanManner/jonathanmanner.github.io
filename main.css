@@ -209,6 +209,9 @@ footer img:hover {
   .flex-container {
     flex-wrap: wrap;
   }
+  .outer-weather-container {
+    flex-direction: column;
+  }
   .nav-list {
     justify-content: center;
   }
