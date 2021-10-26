@@ -27,12 +27,12 @@ const falunUrl = "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/v
 let isStarted = false;
 // const latestForecastRoot = '${tempWeatherData["timeSeries"][0]["parameters"]';
 
-const animateArrow = (location) => {
+const animateArrow = (location, formattedWeatherData) => {
   //add +90 to wind degrees to compensate for animation :)
   //and add 180 degrees to point the arrow to where the wind blows. Not to where it comes from.
   if (location === 'liso') {
   lisoWindArrow.style.transform = `rotate(${
-    tempWeatherData["timeSeries"][0]["parameters"][3]["values"][0] + 270
+    formattedWeatherData["wd"]["values"][0] + 270
   }deg)`;
   lisoWindArrow.style.visibility = "visible";
   } else if (location === 'falun') {
@@ -40,10 +40,10 @@ const animateArrow = (location) => {
     // -->TODO<-- Refactor weatherData to show correct data.
     // -->TODO<-- make sure the arrow works for FALUN
 
-    // falunWindArrow.style.transform = `rotate(${
-    //   tempWeatherData["timeSeries"][0]["parameters"][3]["values"][0] + 270
-    // }deg)`;
-    // falunWindArrow.style.visibility = "visible";
+    falunWindArrow.style.transform = `rotate(${
+      formattedWeatherData["wd"]["values"][0] + 270
+    }deg)`;
+    falunWindArrow.style.visibility = "visible";
   }
 };
 
@@ -96,7 +96,7 @@ const fetchData = async (url, location) => {
         tempWeatherData = await response.json(); //extract JSON from the http response
         const formattedWeatherData = formatData(tempWeatherData["timeSeries"][0]["parameters"]);
         renderResponse(location, formattedWeatherData);
-        animateArrow(location);
+        animateArrow(location, formattedWeatherData);
         clearTimeout(time);
         fetchSpinner.style.visibility = "hidden";
       }
