@@ -21,8 +21,9 @@ const airPressureFalun = document.getElementById("json-output-8");
 const fetchSpinner = document.getElementById("fetch-spinner");
 const lisoWindArrow = document.getElementById("lisoArrowAnim");
 const falunWindArrow = document.getElementById("falunArrowAnim");
-const lisoUrl = "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/18/lat/59/data.json";
-const falunUrl = "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/15/lat/60/data.json";
+const lisoUrl = "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/17.45/lat/58.55/data.json";
+const falunUrl = "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/15.37/lat/60.36/data.json";
+const savsjoUrl = "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/14.39/lat/57.24/data.json";
 
 let isStarted = false;
 // const latestForecastRoot = '${tempWeatherData["timeSeries"][0]["parameters"]';
@@ -36,10 +37,6 @@ const animateArrow = (location, formattedWeatherData) => {
   }deg)`;
   lisoWindArrow.style.visibility = "visible";
   } else if (location === 'falun') {
-
-    // -->TODO<-- Refactor weatherData to show correct data.
-    // -->TODO<-- make sure the arrow works for FALUN
-
     falunWindArrow.style.transform = `rotate(${
       formattedWeatherData["wd"]["values"][0] + 270
     }deg)`;
