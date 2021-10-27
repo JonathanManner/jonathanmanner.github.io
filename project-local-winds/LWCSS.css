@@ -23,6 +23,12 @@
   }
 }
 
+/* data output */
+
+.text {
+  text-align: center;
+}
+
  /* flex */
  .wind-data {
      display: flex;
@@ -34,65 +40,6 @@
  .outer-weather-container {
    display: flex;
  }
-
-
-/* Buttons */
-.lw-button {
-    border: 1px solid #c60021;
-    color: #f6f6f8;
-    border-radius: 5px;
-    width: 200px;
-    height: 40px;
-    padding: 10px;
-    margin: auto;
-    background-color: #c60021;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  /* .lw-button p {
-    text-align: center;
-    user-select: none;
-  } */
-  
-  @media (hover: hover) {
-  .lw-button:hover {
-    cursor: pointer;
-    transform: scale(1.025);
-    background-color: #df0126;
-  }
-}
-
-.lw-button .lw {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-  
-  .lw-button .lw:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-  
-  @media (hover: hover) {
-  .lw-button:hover .lw {
-    padding-right: 25px;
-  }
-}
- 
-@media (hover: hover) {
-  .lw-button:hover .lw:after {
-    opacity: 1;
-    right: 0;
-  }
-}
-  .lw-button:active {
-    transform: scale(1);
-  }
 
   /* Arrow animation */
   .arrowAnim {
